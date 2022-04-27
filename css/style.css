@@ -1,0 +1,267 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color:#F1EAE0;
+}
+
+/* Grid CSS */
+
+ #heroGrid { /* Grid CSS */
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 95% 5%;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-areas: 
+  "leftColumnFaded middleColumnFaded rightColumnFaded"
+  "leftColumn middleColumn rightColumn";
+ }
+/* Category Grid CSS */
+#leftColumnFaded {
+  grid-area: leftColumnFaded;
+  background-image: url(../images/column-one-faded.svg);
+}
+#middleColumnFaded {
+  grid-area: middleColumnFaded;
+  background-image: url(../images/column2-faded.svg);
+}
+#rightColumnFaded {
+  grid-area: rightColumnFaded;
+  background-image: url(../images/column-3-faded.svg);
+}
+#leftColumn {
+  grid-area: leftColumn;
+  background-image: url(../images/left-column.svg);
+}
+#middleColumn {
+  grid-area: middleColumn;
+  background-image: url(../images/middle-column.svg);
+}
+#rightColumn {
+  grid-area: rightColumn;
+  background-image: url(../images/right-column.svg);
+}
+
+
+.heroGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+#headline {
+  border-radius: 15px;
+  background-color: #F1EAE0;
+  padding: 30px;
+  padding-left: 100px;
+  position: absolute;
+  left: -20px; 
+  right: -20px;
+   align-self: center;
+    z-index: 1;
+}
+.subHeading {
+  text-align: center;
+  border-bottom: 2px solid #E93119;
+  width: 300px;
+  margin: 50px auto;
+}
+#caseStudiesGrid {
+  margin: 0px 5%;
+  margin-bottom: 50px;
+  column-gap: 25px;
+  display: grid;
+  grid-template-rows: 300px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "snapcycle pineIsland VAC"
+  "snapcycleDescription pineIslandDescription vacDescription"
+  
+}
+#snapcycle {
+  grid-area: snapcycle;
+  background-image: url(../images/snap-cycle.png);
+}
+#pineIsland {
+  grid-area: pineIsland;
+  background-image: url(../images/pineIsland.png);
+}
+
+#VAC {
+  grid-area: VAC;
+  background-image: url(../images/VAC.png);
+}
+
+
+.caseStudiesGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+.heading {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0px 0px 5px 5px;
+  padding: 15px;
+  height: 10px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  color: #064B72;
+  text-align: center;
+  text-justify: center;
+  padding-bottom: 35px;
+}
+/* Navigation CSS */
+/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
+
+
+#navBar {
+  background-color: #064B72;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 5%;
+  padding-left: 20px;
+}
+#navBar h1 {
+  color: #F1EAE0;
+  width: 25%;
+  font-weight: 500;
+}
+#navigation {
+  display: flex;
+  width: 70%;
+  align-items: center;  
+  justify-content: space-evenly;
+}
+#navigation p {
+  cursor: pointer;
+  text-decoration: none;
+  color: #F1EAE0;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.icons img {
+  margin: 15px;
+  cursor: pointer;
+}
+.highlight {
+  color: #FF6200;
+  font-weight: 700;
+}
+#aboutGrid {
+  margin: 0px 5%;
+  display: grid;
+  min-height: 500px;
+  height: 70vh;
+  grid-template-rows: 1fr;
+  grid-template-columns:1fr 2fr;
+  grid-template-areas: 
+  "photoSideBar rightSection";
+}
+.aboutGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+#photoSideBar {
+  grid-area: photoSideBar;
+  background-color: #064B72;
+}
+#rightSection {
+  grid-area: rightSection;
+  background-color: #F1EAE0;
+}
+#aboutMe {
+  padding: 30px;
+  padding-left: 100px;
+  max-width: 400px;
+  position: absolute;
+  left: 50px; 
+  right: -20px;
+   align-self: center;
+    z-index: 2;
+}
+/* Typography CSS */
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 0px;
+  color: #064B72;
+  font-style: verdana;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0px 0px;
+  font-family: serif;
+  font-weight: bold;
+  color: #E93119;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+p2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #064B72;
+}
+
+#headline p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px 0px;
+  color: #064B72;
+}
+@media only screen and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  #headline {
+    position: absolute;
+    left: -90px;
+    right: -90px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: absolute;
+    left: -90px;
+    right: -90px;
+    margin: 20px;
+
+  }
+  #headline p1 {
+    display: none;
+  }
+
+  #heroGrid {
+    grid-template-areas: "leftColumn middleColumn rightColumn"
+  }
+
+  #caseStudiesGrid {
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "snapcycle"
+    "pineIsland"
+    "VAC"
+
+  }
+}
